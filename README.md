@@ -113,7 +113,7 @@ For most use cases a 5-minute life-cycle will work well by creating a batch comm
 
 ``` php
 $schedule->command('queue:batch --time-limit=280 --job-limit=1000 --sleep=10')
-         ->everyMinute()
+         ->everyFiveMinutes()
          ->runInBackground()
          ->withoutOverlapping(5);
 ```
